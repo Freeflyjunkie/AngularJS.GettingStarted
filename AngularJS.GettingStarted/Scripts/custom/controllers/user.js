@@ -20,5 +20,9 @@
                 $http.get("https://api.github.com/users/" + $scope.username)
                                .then(onUserComplete, onError);
             }
+
+            // sort desc with - , sort asc with +
+            $scope.repoSortOrder = "-stargazers_count";
+
         }]);
 }());

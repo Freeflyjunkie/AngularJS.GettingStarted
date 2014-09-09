@@ -53,6 +53,15 @@
                     </div>
                 </div>
                 <div class="row">
+                    <div class="col-md-12">
+                        <select ng-model="repoSortOrder">
+                            <option value="+name">Name</option>
+                            <option value="-stargazers_count">Stars</option>
+                            <option value="+language">Language</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
                     <div class="col-md-2">Repositories</div>
                     <div class="col-md-10">
                         <table>
@@ -61,7 +70,7 @@
                                 <th>Stars</th>
                                 <th>Language</th>
                             </tr>
-                            <tr ng-repeat="repo in repos">
+                            <tr ng-repeat="repo in repos | orderBy : repoSortOrder">
                                 <td>{{repo.name}}</td>
                                 <td>{{repo.stargazers_count | number}}</td>
                                 <td>{{repo.language}}</td>
@@ -69,7 +78,6 @@
                         </table>
                     </div>
                 </div>
-                {{repos | json}}
             </div>
         </div>
     </div>
