@@ -18,6 +18,9 @@
         <div class="row">
             <div ng-controller="UserController">
                 <div class="col-md-12">
+                    Auto searching in {{ countdown }} seconds
+                </div>
+                <div class="col-md-12">
                     <form name="searchUser" ng-submit="searchGithub()">
                         <input type="search" required placeholder="search" ng-model="username" />
                         <input type="submit" value="Search" />
@@ -25,7 +28,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-2">
-                        {{error}}
+                        {{ error }}
                     </div>
                 </div>
                 <div class="row">
@@ -33,7 +36,7 @@
                         Name
                     </div>
                     <div class="col-md-10">
-                        {{user.name}}
+                        {{ user.name }}
                     </div>
                 </div>
                 <div class="row">
@@ -41,7 +44,7 @@
                         Email
                     </div>
                     <div class="col-md-10">
-                        {{user.email}}
+                        {{ user.email }}
                     </div>
                 </div>
                 <div class="row">
@@ -87,6 +90,7 @@
 {
     <script src="~/Scripts/angular.js"></script>
     <script src="~/Scripts/custom/script.js"></script>
+    <script src="~/Scripts/custom/services/github.js"></script>
     <script src="~/Scripts/custom/controllers/main.js"></script>
     <script src="~/Scripts/custom/controllers/user.js"></script>
 }
