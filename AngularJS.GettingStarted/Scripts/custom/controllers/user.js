@@ -22,7 +22,7 @@
             }
 
             // sort desc with - , sort asc with +
-            $scope.repoSortOrder = "-stargazers_count";
+            $scope.repoSortOrder = "+name";
 
         }]);
 }());
