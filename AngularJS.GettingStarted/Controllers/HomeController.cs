@@ -11,6 +11,6 @@ namespace AngularJS.GettingStarted.Controllers
         public ActionResult Index()
         {
             return View();
-        }     
+        } 
     }
 }
