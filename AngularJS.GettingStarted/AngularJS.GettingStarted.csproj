@@ -152,6 +152,7 @@
     <Content Include="Scripts\custom\controllers\main.js" />
     <Content Include="Scripts\custom\controllers\user.js" />
     <Content Include="Scripts\custom\script.js" />
+    <Content Include="Scripts\custom\services\github.js" />
     <Content Include="Scripts\errors.json" />
     <Content Include="Scripts\angular-touch.min.js.map" />
     <Content Include="Scripts\angular-sanitize.min.js.map" />
