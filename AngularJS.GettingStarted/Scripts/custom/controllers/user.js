@@ -10,6 +10,8 @@
 
                 //$http.get($scope.user.repos_url)
                 //    .then(onReposComplete, onError);
+
+                $scope.error = null;
             };
 
             var onReposComplete = function (data) {                
@@ -17,7 +19,8 @@
             };
 
             var onError = function (reason) {
-                $scope.error = reason.data.message;
+                $scope.error = 'Error occurred: ' + reason.data.message;
+                $scope.user = null;
             };
 
             var decrementCountdown = function() {
